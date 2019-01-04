@@ -9,8 +9,8 @@
     <head>
       <h1>CoffeeRun</h1>
     </head>
-    <div class="">
-      <div class="">
+    <div class="panel panel-default">
+      <div class="panel-body">
         <form data-coffee-order="form">
           <div class="form-group">
             <label  for="coffeeOrder">Coffee Order &nbsp;</label>
@@ -38,6 +38,12 @@
               Grande
             </label>
           </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="godzilla">
+              Godzilla
+            </label>
+          </div>
           <div class="form-group">
             <label for="flavorShot">Flavor Shot</label>
             <select id="flavorShot" class="form-control" name="flavor">
@@ -50,16 +56,26 @@
           <div class="form-group">
             <label for="strengthLevel">Caffeine Rating</label>
             <input type="range" name="strength" id="strengthLevel" value="30">
+            <span id="strengthLevelValue"></span>
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
           <button type="reset" class="btn btn-default">Reset</button>
         </form>
       </div>
     </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4>Pending Orders:</h4>
+        <div data-coffee-order="checklist">
+
+        </div>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+    <script src="scripts/checklist.js" charset="utf-8"> </script>
     <script src="scripts/formhandler.js" charset="uft-8"></script>
     <script src="scripts/coffeerun.js" charset="utf-8"></script>
     <script src="scripts/truck.js" charset="utf-8"></script>
-    <script src="scripts/main.js" charset="utf-8"></script>  
+    <script src="scripts/main.js" charset="utf-8"></script>
   </body>
 </html>
